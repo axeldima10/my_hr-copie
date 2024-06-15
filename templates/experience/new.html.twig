@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Experience{% endblock %}
+
+{% block content_for_layout %}
+    <h1>Ajouter une experience</h1>
+
+    {{ include('experience/_form.html.twig') }}
+
+    <a href="{{ path('app_experience_index') }}">Retour</a>
+{% endblock content_for_layout %}

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Diplome{% endblock %}
+
+{% block content_for_layout %}
+    <h1>Ajouter un diplôme</h1>
+
+    {{ include('diplome/_form.html.twig') }}
+
+    <a href="{{ path('app_diplome_index') }}">retour à la liste</a>
+{% endblock content_for_layout %}
+

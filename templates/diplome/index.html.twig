@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+
+{% block content_for_layout %}
+
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+
+    
+    <!-- DataTales Example -->
+   
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <a href="{{ path('app_diplome_new') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Ajouter un diplôme</a>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                   
+                    <tbody>
+                        {% for diplome in diplomes %}
+
+                        <tr>
+                            <td> {{diplome.title}} </td>
+                            <td>
+                                <a name="" id="" class="btn btn-success btn-xs" href=" {{ path('app_diplome_edit', {'id': diplome.id}) }} " role="button">Edit</a>
+                                <a name="" id="" class="btn btn-danger btn-xs" href=" {{ path('app_diplome_delete', {'id': diplome.id}) }}" role="button">Delete</a>
+                            </td> 
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td colspan="3">no records found</td>
+                        </tr>
+                            
+                        {% endfor %}
+                      
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+                        
+{% endblock content_for_layout %}
