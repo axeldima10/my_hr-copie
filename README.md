@@ -25,7 +25,24 @@ Cette application de suivi des candidatures (ATS) est développée avec Symfony 
 1. **Cloner le Dépôt** :
    ```bash
    git clone https://github.com/axeldima10/my_hr-copie.git
-2. Installer les Dépendances :
-Assurez-vous d'avoir Composer installé, puis exécutez :
-  ```
-    composer install
+2. **Installer les Dépendances** :
+   Assurez-vous d'avoir Composer installé, puis exécutez :
+   ```bash
+   composer install
+3. Configurer l'Environnement :
+  Renommez .env.example en .env et configurez vos paramètres de base de données.
+4. Créer la base de données
+   ```
+   php bin/console doctrine:database:create
+   php bin/console doctrine:schema:update --force
+
+5. Lancer l'application
+   ```
+   symfony server:start
+   
+Technologies
+Symfony
+Doctrine ORM
+Twig
+Composer
+ 
