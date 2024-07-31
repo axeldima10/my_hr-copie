@@ -40,9 +40,9 @@ Cette application de suivi des candidatures (ATS) est développée avec Symfony 
    ```
    symfony server:start
    
-Technologies
-Symfony
-Doctrine ORM
-Twig
-Composer
+##Technologies
+- Symfony
+- Doctrine ORM
+- Twig
+- Composer
  
