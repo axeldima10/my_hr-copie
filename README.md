@@ -28,15 +28,17 @@ Cette application de suivi des candidatures (ATS) est développée avec Symfony 
 2. **Installer les Dépendances** :
    Assurez-vous d'avoir Composer installé, puis exécutez :
    ```bash
+   cd votrerepository
    composer install
 3. Configurer l'Environnement :
   Renommez .env.example en .env et configurez vos paramètres de base de données.
-4. Créer la base de données
    ```
    php bin/console doctrine:database:create
    php bin/console doctrine:schema:update --force
-
-5. Lancer l'application
+4. Exécutez les migrations :
+   ```
+     php bin/console doctrine:migrations:migrate
+6. Lancer l'application
    ```
    symfony server:start
    
